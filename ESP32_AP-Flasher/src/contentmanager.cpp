@@ -1327,8 +1327,8 @@ bool getCalFeed(String &filename, JsonObject &cfgobj, tagRecord *&taginfo, imgPa
             spr.drawLine(colStart, calTop, colStart, calBottom, TFT_BLACK);
             spr.drawLine(0, calTop + calYOffset, calWidth, calTop + calYOffset, TFT_BLACK);
 
-            int minHour = 9;
-            int maxHour = 17;
+            int minHour = loc["hours"][0].as<int>();
+            int maxHour = loc["hours"][1].as<int>();
 
             int n = doc.size();
             int maxBlock = 0;
